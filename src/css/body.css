@@ -48,14 +48,14 @@
     'main main . sidebar'
     'footeer footeer footeer footeer'; */
 
-     /* justify-items
+  /* justify-items
     align-items
     justify-content
     align-content
     justify-self
     align-self */
 
-    grid-template-columns: 4 150px;
+  /* grid-template-columns: 4 150px;
     grid-template-rows: 3 150px;
     border: 10px solid;
     justify-items: start;
@@ -63,7 +63,11 @@
     justify-content: start;
     align-content: start;
     justify-self: start;
-    align-self: start;
+    align-self: start; */
+
+  /* Вкладені гріди */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 /* .header {
@@ -108,6 +112,13 @@
       'sidebar footeer footeer footeer';
   }
 } */
-    
 
-
+/* Вкладені гріди */
+.grid-item {
+  border: 2px solid #000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
